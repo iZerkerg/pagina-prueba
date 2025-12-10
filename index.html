@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Práctica de JavaScript y APIs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Práctica de JavaScript + APIs</h1>
+    <p>Juega con el DOM, eventos y APIs desde una sola página.</p>
+  </header>
+
+  <main class="container">
+    <!-- Sección 1: DOM básico -->
+    <section class="card" id="dom-basico">
+      <h2>1. DOM y eventos</h2>
+      <p>Practica cambios básicos en el HTML usando JavaScript.</p>
+
+      <div class="subsection">
+        <h3>1.1. Contador</h3>
+        <p id="contador-valor">0</p>
+        <div class="btn-group">
+          <button id="btn-restar">-</button>
+          <button id="btn-sumar">+</button>
+          <button id="btn-reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>1.2. Mostrar / ocultar texto</h3>
+        <button id="btn-toggle-texto">Mostrar / ocultar mensaje</button>
+        <p id="texto-toggle" class="oculto">
+          Este texto se muestra y se oculta con JavaScript.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección 2: Arrays y JSON "local" -->
+    <section class="card" id="arrays-json">
+      <h2>2. Arrays y objetos (sin API)</h2>
+      <p>
+        Aquí vas a practicar recorrer arrays y objetos en JavaScript
+        y mostrarlos en el HTML.
+      </p>
+
+      <button id="btn-cargar-local">Cargar lista local de tareas</button>
+      <ul id="lista-tareas"></ul>
+    </section>
+
+    <!-- Sección 3: API de usuarios -->
+    <section class="card" id="api-usuarios">
+      <h2>3. API de usuarios</h2>
+      <p>
+        Usa la API de prueba <code>https://jsonplaceholder.typicode.com/users</code>
+        para cargar y mostrar usuarios.
+      </p>
+
+      <button id="btn-cargar-usuarios">Cargar usuarios</button>
+      <ul id="lista-usuarios"></ul>
+    </section>
+
+    <!-- Sección 4: API de chistes -->
+    <section class="card" id="api-chiste">
+      <h2>4. API de chistes</h2>
+      <p>
+        Cada clic pide un chiste nuevo a una API (por ejemplo,
+        <code>https://api.chucknorris.io/jokes/random</code>).
+      </p>
+
+      <button id="btn-chiste">Obtener chiste</button>
+      <p id="texto-chiste"></p>
+    </section>
+
+    <!-- Sección 5: API de imágenes (perritos) -->
+    <section class="card" id="api-perro">
+      <h2>5. API de imágenes (perritos)</h2>
+      <p>
+        Usa la API <code>https://dog.ceo/api/breeds/image/random</code>
+        para mostrar una imagen aleatoria.
+      </p>
+
+      <button id="btn-perro">Ver perrito aleatorio</button>
+      <div class="image-wrapper">
+        <img id="img-perro" alt="Imagen de un perrito aleatorio" />
+      </div>
+    </section>
+
+    <!-- Sección 6: Búsqueda con API (Pokémon) -->
+    <section class="card" id="api-pokemon">
+      <h2>6. Buscador con API (Pokémon)</h2>
+      <p>
+        Escribe el nombre de un Pokémon y consulta la API
+        <code>https://pokeapi.co/</code>.
+      </p>
+
+      <form id="form-pokemon">
+        <label for="input-pokemon">Nombre del Pokémon:</label>
+        <input
+          type="text"
+          id="input-pokemon"
+          placeholder="ej: pikachu"
+          autocomplete="off"
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div id="resultado-pokemon">
+        <!-- Aquí mostrarás el nombre, imagen, tipo, etc. con JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho para practicar JavaScript, DOM y APIs ✨</p>
+  </footer>
+
+  <!-- Aquí irán tus scripts de JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
