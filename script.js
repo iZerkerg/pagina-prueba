@@ -21,21 +21,18 @@ function actualizarContador(valor) {
 actualizarContador(contador);
 
 btnSumar.addEventListener("click", () => {
-  contador++;
-  let resultado = contador * multiplicador;
-  actualizarContador(resultado);
+  contador+= multiplicador;
+  actualizarContador(contador);
 });
 
 btnRestar.addEventListener("click", () => {
-  contador--;
-  let resultado = contador * multiplicador;
-  actualizarContador(resultado);
+  contador-= multiplicador;
+  actualizarContador(contador);
 });
 
 btnReset.addEventListener("click", () => {
   contador = 0;
-  let resultado = contador * multiplicador;
-  actualizarContador(resultado);
+  actualizarContador(contador);
 });
 
 
@@ -54,7 +51,7 @@ function actualizarMultiplicador() {
 }
 
 //Mostrar valor inicial
-actualizarMultiplicador();
+actualizarMultiplicador(multiplicador);
 
 btnSumarMul.addEventListener("click", () => {
   multiplicador++;
